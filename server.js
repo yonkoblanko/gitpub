@@ -14,12 +14,9 @@ app.get ("/", (req, res) => {
 })
   
 app.get("/drinks/:id", (req, res) => {
-    res.send(req.params.id)
+    res.render("drinks_show.ejs", { drink:drinks[req.params.id]})
 })
 
-app.get("/drinks.js/:indexOfDrinksArray", (req, res) => {
-    res.render("show.ejs", { drink:drinks[req.params.indexOfDrinksArray]})
-})
 
 app.listen(3000, () => {
   console.log("Welcome to gitpub !")
