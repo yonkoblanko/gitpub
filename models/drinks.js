@@ -41,4 +41,5 @@ const drinks = [
     },
   ]
 
-//   modules.exports = drinks
+
+  module.exports = drinks
